@@ -1,6 +1,6 @@
 ## Openshift and Firefox Ubuntu Docker Image
 
-This repository contains a customized **Dockerfile** of [Ubuntu](http://www.ubuntu.com/) to allow for [Openshift Cluster](https://docs.openshift.com/container-platform/3.11/welcome/index.html) to be installed and configured on it. It also includes Firefox so that you can access the Openshift Cluster GUI in the browser, once you have configured it.
+This repository contains a customized [Ubuntu](http://www.ubuntu.com/) Dockerfile to allow for [Openshift Cluster](https://docs.openshift.com/container-platform/3.11/welcome/index.html) to be installed and configured on it. It also includes Firefox so that you can access the Openshift Cluster GUI in the browser, once you have configured it.
 
 This is aimed for those who are unable to install Openshift locally on their machine!
 
