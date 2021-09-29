@@ -1,6 +1,8 @@
-## Ubuntu Dockerfile
+## Openshift and Firefox Ubuntu Docker Image
 
-This repository contains **Dockerfile** of [Ubuntu](http://www.ubuntu.com/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/dockerfile/ubuntu/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
+This repository contains a customized **Dockerfile** of [Ubuntu](http://www.ubuntu.com/) to allow for [Openshift Cluster](https://docs.openshift.com/container-platform/3.11/welcome/index.html) to be installed and configured on it. It also includes Firefox so that you can access the Openshift Cluster GUI in the browser, once you have configured it.
+
+This is aimed for those who are unable to install Openshift locally on their machine!
 
 ### Base Docker Image
 
@@ -9,6 +11,7 @@ This repository contains **Dockerfile** of [Ubuntu](http://www.ubuntu.com/) for 
 ### Prerequisities
 
 1. Install [Docker](https://www.docker.com/).
+1. Install a VNC client like [VNC Viewer](https://www.realvnc.com/en/connect/). You'll need this to use Firefox in the image.
 1. You need to register an account on the Red Hat Customer Portal. This will be used when the `oc-setup.sh` is run later in the process, you will need to login into Docker via the command-line in order to allow for Openshift to be installed.
 1. Save your username and password, you will need them in the next section.
 
@@ -24,4 +27,6 @@ This repository contains **Dockerfile** of [Ubuntu](http://www.ubuntu.com/) for 
    - `cp oc kubectl /usr/local/bin/`
    - `oc version`
    - `systemctl restart docker`
-1. In a separate tab or window of your command-line client, run `docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container id>`. Save the IP address somewhere, you will need it later when you launch the Openshift cluster inside the Docker image.
+1. In a separate tab or window of your command-line client, run `docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container id>`. Save the IP address somewhere, you will need it later when:
+   - you launch the Openshift cluster inside the Docker image
+   - and, you want to use Firefox from the VNC client
