@@ -17,7 +17,7 @@ This is aimed for those who are unable to install Openshift locally on their mac
 
 ### Installation and Usage
 
-1. `docker build -t oc-ubuntu.`
+1. `docker build -t oc-ubuntu .`
 1. `docker run -itd --privileged oc-ubuntu:latest /usr/sbin/init`
 1. `docker exec -it --privileged <container id> bash`
 1. Run `./oc-setup.sh` once you're logged in as *root* in the Docker image.
