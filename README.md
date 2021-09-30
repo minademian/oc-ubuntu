@@ -12,7 +12,7 @@ This is aimed for those who are unable to install Openshift locally on their mac
 
 1. Install [Docker](https://www.docker.com/).
 1. Install a VNC client like [VNC Viewer](https://www.realvnc.com/en/connect/). You'll need this to use Firefox in the image.
-1. You need to register an account on the Red Hat Customer Portal. This will be used when the `oc-setup.sh` is run later in the process, you will need to login into Docker via the command-line in order to allow for Openshift to be installed.
+1. You need to register an account on the [Red Hat Customer Portal](https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/registrations?client_id=https%3A%2F%2Fwww.redhat.com%2Fwapps%2Fugc-oidc&redirect_uri=https%3A%2F%2Fwww.redhat.com%2Fwapps%2Fugc%2Fprotected%2Faccount.html&response_type=code&scope=openid). This will be used when the `oc-setup.sh` is run later in the process, you will need to login into Docker via the command-line in order to allow for Openshift to be installed.
 1. Save your username and password, you will need them in the next section.
 
 ### Installation and Usage
